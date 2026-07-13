@@ -1,0 +1,22 @@
+name: PR Quality Check
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Verify Architecture Directories
+        run: |
+          if [ ! -d "src" ]; then
+            echo "Error: 'src' directory is missing."
+            exit 1
+          fi
+          
+      - name: Acknowledge Pipeline
+        run: echo "Basic architecture verified. Add your language-specific linters and tests here."
