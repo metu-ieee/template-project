@@ -1,0 +1,14 @@
+{
+  "commitConvention": "angular",
+  "contributors": [],
+  "projectName": "template-project",
+  "projectOwner": "metu-ieye",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageWidth": 100,
+  "badgeWidth": 20,
+  "contributorsPerLine": 7
+}
