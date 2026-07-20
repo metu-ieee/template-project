@@ -1,19 +1,6 @@
 {
   "commitConvention": "angular",
-  "contributors": [
-    {
-      "login": "taglukahmet",
-      "name": "Ahmet Tağluk",
-      "avatar_url": "https://avatars.githubusercontent.com/u/184697668?v=4",
-      "profile": "https://github.com/taglukahmet",
-      "contributions": [
-        "code",
-        "doc",
-        "maintenance",
-        "tool"
-      ]
-    }
-  ],
+  "contributors": [],
   "projectName": "template-project",
   "projectOwner": "metu-ieee",
   "repoType": "github",
