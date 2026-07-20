@@ -11,8 +11,3 @@ The standard boilerplate for METU IEEE CS software projects. Includes standard d
 
 Thanks goes to these wonderful people ([contribute guidelines](CONTRIBUTING.md)):
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/your-username"><img src="https://avatars.githubusercontent.com/u/0000000?v=4" width="100px;" alt=""/><br /><b>Your Name</b></a><br /><a href="https://github.com/metu-ieee/template-project/commits?author=your-username" title="Code">💻</a></td>
-  </tr>
-</table>
