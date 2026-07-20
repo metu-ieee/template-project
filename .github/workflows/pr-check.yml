@@ -17,6 +17,17 @@ jobs:
             echo "Error: 'src' directory is missing."
             exit 1
           fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Formatter
+        run: pip install black
+
+      - name: Enforce Code Formatting
+        run: black --check src/
           
       - name: Acknowledge Pipeline
         run: echo "Basic architecture verified. Add your language-specific linters and tests here."
