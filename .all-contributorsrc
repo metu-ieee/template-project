@@ -1,8 +1,21 @@
 {
   "commitConvention": "angular",
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "taglukahmet",
+      "name": "Ahmet Tağluk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184697668?v=4",
+      "profile": "https://github.com/taglukahmet",
+      "contributions": [
+        "code",
+        "doc",
+        "maintenance",
+        "tool"
+      ]
+    }
+  ],
   "projectName": "template-project",
-  "projectOwner": "metu-ieye",
+  "projectOwner": "metu-ieee",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -10,5 +23,6 @@
   ],
   "imageWidth": 100,
   "badgeWidth": 20,
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "commitType": "docs"
 }
