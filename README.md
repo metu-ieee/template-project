@@ -11,8 +11,3 @@ The standard boilerplate for METU IEEE CS software projects. Includes standard d
 
 Thanks goes to these wonderful people ([contribute guidelines](CONTRIBUTING.md)):
 
-<table>
-  <tr>
-  </tr>
-</table>
-
