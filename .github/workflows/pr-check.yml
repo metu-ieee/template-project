@@ -2,6 +2,10 @@ name: PR Quality Check
 
 on:
   pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
     branches: [ "main" ]
 
 jobs:
@@ -10,6 +14,25 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Enforce Branch Naming Convention
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          if [[ ! $BRANCH_NAME =~ ^(feat|fix|docs|chore|refactor)/ ]]; then
+            echo "::error title=Invalid Branch Name::Your branch is named '$BRANCH_NAME'. It MUST start with one of the following prefixes: feat/, fix/, docs/, chore/, or refactor/. Example: feat/database-setup. Please rename your branch and push again."
+            exit 1
+          fi
+
+      - name: Enforce Semantic PR Title
+        uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          subjectPattern: ^(?!\s).+$
+          subjectPatternError: |
+            Your Pull Request title is incorrect. 
+            It must follow the Conventional Commits format. 
+            Example: 'feat: add user authentication' or 'fix: resolve memory leak'.
 
       - name: Verify Architecture Directories
         run: |
@@ -21,13 +44,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.x'
 
       - name: Install Formatter
         run: pip install black
 
       - name: Enforce Code Formatting
         run: black --check src/
-          
+
       - name: Acknowledge Pipeline
         run: echo "Basic architecture verified. Add your language-specific linters and tests here."
